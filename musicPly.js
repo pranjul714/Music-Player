@@ -1,5 +1,4 @@
 
-
 // Initialize the Variables
 let songIndex = 0;
 let audioElement = new Audio("./songs/1.mp3");
@@ -60,6 +59,21 @@ let songs = [
     filePath: "./songs/10.mp3",
     coverPath: "./covers/10.jpg",
   },
+   {
+    songName: "SHEIN",
+    filePath: "./songs/11.mp3",
+    coverPath: "./covers/1800063381670960.jpeg",
+  },
+   {
+    songName: "CHEAP THRILL",
+    filePath: "./songs/12.mp3",
+    coverPath: "./covers/1801867344770436-1801867359717677.jpeg",
+  },
+   {
+    songName: "STAN AND THE SCREAMING STEEL",
+    filePath: "./songs/13.mp3",
+    coverPath: "./covers/cover-placeholder.webp",
+  },
 ];
 
 songItems.forEach((element, i) => {
@@ -69,18 +83,34 @@ songItems.forEach((element, i) => {
 
 document.getElementById("Song-Cover").src = songs[songIndex].coverPath;
 
+ function tabclick( index)
+ {
+  songIndex = index;
+  audioElement.src = `songs/${songIndex + 1}.mp3`;
+  audioElement.play();
+  masterPlay.classList.toggle("bi-play-circle", false);
+  masterPlay.classList.toggle("bi-pause-circle", true);
+  document.getElementById("Song-Cover").src = songs[songIndex].coverPath;
+  document.getElementById("songTittle").innerHTML = songs[songIndex].songName;
+  audioElement.currentTime = 0;
+ 
+ }
+
+
 masterPlay.addEventListener("click", MusicPlay);
 function MusicPlay() {
   if (audioElement.paused || audioElement.currentTime <= 0) {
-    audioElement.play();
+   
     document.getElementById("Song-Cover").src = songs[songIndex].coverPath;
     document.getElementById("songTittle").innerHTML = songs[songIndex].songName;
+     audioElement.play();
     masterPlay.classList.toggle("bi-play-circle", false);
     masterPlay.classList.toggle("bi-pause-circle", true);
   } else {
-    audioElement.pause();
+   
     masterPlay.classList.toggle("bi-pause-circle", false);
     masterPlay.classList.toggle("bi-play-circle", true);
+     audioElement.pause();
   }
 }
 
@@ -96,10 +126,12 @@ myProgressBar.addEventListener("change", () => {
 //     myProgressBar.value = progress;
 
 // })
+ console.log(songs.length - 1);
 
 document.getElementById("next").addEventListener("click", NextPlay);
 function NextPlay() {
-  if (songIndex >= 9) {
+  
+  if (songIndex >= 12) {
     songIndex = 0;
     audioElement.src = `songs/${songIndex + 1}.mp3`;
     audioElement.play();
@@ -124,10 +156,11 @@ document.getElementById("previous").addEventListener("click", PreviousPlay);
 
 function PreviousPlay() {
   if (songIndex <= 0) {
-    songIndex = 9;
+    songIndex = 12;
+     audioElement.play();
     audioElement.src = `songs/${songIndex}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
-    audioElement.play();
+   
     document.getElementById("Song-Cover").src = songs[songIndex].coverPath;
     document.getElementById("songTittle").innerHTML = songs[songIndex].songName;
     masterPlay.classList.toggle("bi-play-circle", false);
