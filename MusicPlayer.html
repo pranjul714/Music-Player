@@ -46,6 +46,7 @@
 
         <section class="featured" tabindex="0" aria-label="Featured playlist">
           <img src="./covers/1.jpg" alt="Featured Playlist Cover" />
+           
           <div class="featured-info">
             <div class="title">Today's Top Hits</div>
             <div class="desc">
@@ -60,7 +61,7 @@
             tabindex="0"
             aria-label="Morning Vibes playlist"
           >
-            <img class="playlist-cover" src=" " alt="Morning Vibes cover" />
+            <img onclick="tabclick(0)" class="playlist-cover" src=" " alt="Morning Vibes cover" />
             <h3 class="playlist-title">Morning Vibes</h3>
             <p class="playlist-desc songName"></p>
           </article>
@@ -69,16 +70,17 @@
             tabindex="0"
             aria-label="Chill Hits playlist"
           >
-            <img class="playlist-cover" src="" alt="Chill Hits cover" />
+            <img  onclick="tabclick(1)" class="playlist-cover" src="" alt="Chill Hits cover" />
             <h3 class="playlist-title">Chill Hits</h3>
             <p class="playlist-desc songName"></p>
           </article>
+
           <article
             class="playlist-card songItem"
             tabindex="0"
             aria-label="Rock Classics playlist"
           >
-            <img class="playlist-cover" src=" " alt="Rock Classics cover" />
+            <img  onclick="tabclick(2)" class="playlist-cover" src=" " alt="Rock Classics cover" />
             <h3 class="playlist-title">Rock Classics</h3>
             <p class="playlist-desc songName"></p>
           </article>
@@ -87,7 +89,7 @@
             tabindex="0"
             aria-label="Jazz Vibes playlist"
           >
-            <img class="playlist-cover" src="" alt="Jazz Vibes cover" />
+            <img  onclick="tabclick(3)" class="playlist-cover" src="" alt="Jazz Vibes cover" />
             <h3 class="playlist-title">Jazz Vibes</h3>
             <p class="playlist-desc songName"></p>
           </article>
@@ -96,7 +98,7 @@
             tabindex="0"
             aria-label="Pop Rising playlist"
           >
-            <img class="playlist-cover" src="" alt="Pop Rising cover" />
+            <img  onclick="tabclick(4)" class="playlist-cover" src="" alt="Pop Rising cover" />
             <h3 class="playlist-title">Pop Rising</h3>
             <p class="playlist-desc songName"></p>
           </article>
@@ -106,7 +108,7 @@
             tabindex="0"
             aria-label="Pop Rising playlist"
           >
-            <img class="playlist-cover" src="" alt="Pop Rising cover" />
+            <img  onclick="tabclick(5)" class="playlist-cover" src="" alt="Pop Rising cover" />
             <h3 class="playlist-title">Pop Rising</h3>
             <p class="playlist-desc songName"></p>
           </article>
@@ -116,7 +118,7 @@
             tabindex="0"
             aria-label="Pop Rising playlist"
           >
-            <img class="playlist-cover" src=" " alt="Pop Rising cover" />
+            <img  onclick="tabclick(6)" class="playlist-cover" src=" " alt="Pop Rising cover" />
             <h3 class="playlist-title">Pop Rising</h3>
             <p class="playlist-desc songName"></p>
           </article>
@@ -126,7 +128,7 @@
             tabindex="0"
             aria-label="Pop Rising playlist"
           >
-            <img class="playlist-cover" src=" " alt="Pop Rising cover" />
+            <img  onclick="tabclick(7)" class="playlist-cover" src=" " alt="Pop Rising cover" />
             <h3 class="playlist-title">Pop Rising</h3>
             <p class="playlist-desc songName"></p>
           </article>
@@ -136,7 +138,7 @@
             tabindex="0"
             aria-label="Pop Rising playlist"
           >
-            <img class="playlist-cover" src="" alt="Pop Rising cover" />
+            <img  onclick="tabclick(8)" class="playlist-cover" src="" alt="Pop Rising cover" />
             <h3 class="playlist-title">Pop Rising</h3>
             <p class="playlist-desc songName"></p>
           </article>
@@ -146,7 +148,39 @@
             tabindex="0"
             aria-label="Pop Rising playlist"
           >
-            <img class="playlist-cover" src="" alt="Pop Rising cover" />
+            <img  onclick="tabclick(9)" class="playlist-cover" src="" alt="Pop Rising cover" />
+            <h3 class="playlist-title">Pop Rising</h3>
+            <p class="playlist-desc songName"></p>
+          </article>
+
+          <article
+            class="playlist-card songItem"
+            tabindex="0"
+            aria-label="Pop Rising playlist"
+          >
+            <img  onclick="tabclick(10)" class="playlist-cover" src="" alt="Pop Rising cover" />
+            <h3 class="playlist-title">Pop Rising</h3>
+            <p class="playlist-desc songName"></p>
+          </article> 
+
+
+          <article
+            class="playlist-card songItem"
+            tabindex="0"
+            aria-label="Pop Rising playlist"
+          >
+            <img onclick="tabclick(11)" class="playlist-cover" src="" alt="Pop Rising cover" />
+            <h3 class="playlist-title">Pop Rising</h3>
+            <p class="playlist-desc songName"></p>
+          </article>
+
+
+          <article
+            class="playlist-card songItem"
+            tabindex="0"
+            aria-label="Pop Rising playlist"
+          >
+            <img onclick="tabclick(12)" class="playlist-cover" src="" alt="Pop Rising cover" />
             <h3 class="playlist-title">Pop Rising</h3>
             <p class="playlist-desc songName"></p>
           </article>
@@ -162,7 +196,9 @@
       <div class="player-left">
         <img class="song-cover" id="Song-Cover" src=" " alt="Song cover" />
         <div class="song-info">
-          <div class="song-title" id="songTittle">Warriyo - Mortals</div>
+          <div class="song-title" id="songTittle">
+            Warriyo - Mortals [NCS Release
+          </div>
         </div>
       </div>
 
